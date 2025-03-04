@@ -1,0 +1,467 @@
+{
+	"id": "1fcfa6a4-8f53-457d-8a53-6fa1bf837198",
+	"name": "Project#2:restful-booker",
+	"timestamp": "2025-03-04T05:46:33.358Z",
+	"collection_id": "42756930-df2f023c-5add-46e6-9897-f7728564724b",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 25,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-03-04T05:46:28.733Z",
+	"totalFail": 31,
+	"results": [
+		{
+			"id": "245e443a-7c66-4112-8c3d-5b89acd0ac0d",
+			"name": "✅Get_withoutId🔓",
+			"url": "https://restful-booker.herokuapp.com/booking",
+			"time": 1757,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response time is less than 200ms": false,
+				"Content-Type header is application/json": true,
+				"Response has the required fields": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1757
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response time is less than 200ms": false,
+					"Content-Type header is application/json": true,
+					"Response has the required fields": true
+				}
+			]
+		},
+		{
+			"id": "8d920918-3c34-4e20-bbd2-d2b771a7d0d5",
+			"name": "✅get_with ID🔓",
+			"url": "https://restful-booker.herokuapp.com/booking/430",
+			"time": 249,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Response status code is 200": false,
+				"Response time is less than 300ms": true,
+				"Response has the required fields": false,
+				"Checkin and checkout dates are in a valid date format": false,
+				"Negative scenario: Response does not contain sensitive information": false
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 300ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Checkin and checkout dates are in a valid date format": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Negative scenario: Response does not contain sensitive information": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				249
+			],
+			"allTests": [
+				{
+					"Response status code is 200": false,
+					"Response time is less than 300ms": true,
+					"Response has the required fields": false,
+					"Checkin and checkout dates are in a valid date format": false,
+					"Negative scenario: Response does not contain sensitive information": false
+				}
+			]
+		},
+		{
+			"id": "5630ee91-039c-446b-bfc7-3f2004e2f6c4",
+			"name": "✅createNewrecord🔓",
+			"url": "https://restful-booker.herokuapp.com/booking",
+			"time": 252,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response time is less than 200ms": false,
+				"Booking object should exist and be an object": true,
+				"Firstname is a non-empty string": true,
+				"Totalprice is a positive integer": false,
+				"Presence of Content-Type header in the response": true,
+				"Response has required fields": false,
+				"Checkin and checkout dates are in a valid date format": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Booking object should exist and be an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Firstname is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Totalprice is a positive integer": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Presence of Content-Type header in the response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has required fields": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Checkin and checkout dates are in a valid date format": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				252
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response time is less than 200ms": false,
+					"Booking object should exist and be an object": true,
+					"Firstname is a non-empty string": true,
+					"Totalprice is a positive integer": false,
+					"Presence of Content-Type header in the response": true,
+					"Response has required fields": false,
+					"Checkin and checkout dates are in a valid date format": true
+				}
+			]
+		},
+		{
+			"id": "ea746e4c-abc8-40ce-9860-6adad0f84eb5",
+			"name": "✅UpdateID🔐",
+			"url": "https://restful-booker.herokuapp.com/booking/1",
+			"time": 259,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response time is less than 200ms": false,
+				"Validate the response schema for required fields": true,
+				"Firstname and Lastname must be non-empty strings": true,
+				"Totalprice is a non-negative integer": true,
+				"Content-Type header is present in the response": true,
+				"Specific value 'Jim' is present in the 'firstname' field of the response body": false,
+				"Specific header 'Content-Type' value is 'application/json'": false,
+				"Specific status message is present in the response body": false
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Validate the response schema for required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Firstname and Lastname must be non-empty strings": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Totalprice is a non-negative integer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present in the response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Specific value 'Jim' is present in the 'firstname' field of the response body": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Specific header 'Content-Type' value is 'application/json'": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Specific status message is present in the response body": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				259
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response time is less than 200ms": false,
+					"Validate the response schema for required fields": true,
+					"Firstname and Lastname must be non-empty strings": true,
+					"Totalprice is a non-negative integer": true,
+					"Content-Type header is present in the response": true,
+					"Specific value 'Jim' is present in the 'firstname' field of the response body": false,
+					"Specific header 'Content-Type' value is 'application/json'": false,
+					"Specific status message is present in the response body": false
+				}
+			]
+		},
+		{
+			"id": "94a63319-679a-4a7d-9475-c6f0c915f2bc",
+			"name": "✅partial_Update_withAuth🔐",
+			"url": "https://restful-booker.herokuapp.com/booking/1",
+			"time": 245,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden"
+			},
+			"tests": {
+				"Response status code is 200": false,
+				"Response time is less than 200ms": false,
+				"Response has the required fields": false,
+				"Firstname is a non-empty string": false,
+				"Lastname is a non-empty string": false,
+				"Response Content-Type header is application/json": false
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 200ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response has the required fields": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Firstname is a non-empty string": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Lastname is a non-empty string": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response Content-Type header is application/json": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				245
+			],
+			"allTests": [
+				{
+					"Response status code is 200": false,
+					"Response time is less than 200ms": false,
+					"Response has the required fields": false,
+					"Firstname is a non-empty string": false,
+					"Lastname is a non-empty string": false,
+					"Response Content-Type header is application/json": false
+				}
+			]
+		},
+		{
+			"id": "cabf86e4-0712-46ed-a96b-f6c15604849a",
+			"name": "✅Delete_withAuth_🔐",
+			"url": "https://restful-booker.herokuapp.com/booking/1",
+			"time": 250,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Response status code is 201": true,
+				"Response time is less than 300ms": true,
+				"Verify that the response body is 'Created'": true,
+				"Validate the Content-Type is text/plain": false,
+				"Ensure that the response does not contain any unnecessary fields or data": false,
+				"Ensure that the response contains the 'Set-Cookie' header": false,
+				"Verify the response body contains the expected message": true,
+				"Presence of 'Set-Cookie' header in the response": false
+			},
+			"testPassFailCounts": {
+				"Response status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 300ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify that the response body is 'Created'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate the Content-Type is text/plain": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Ensure that the response does not contain any unnecessary fields or data": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Ensure that the response contains the 'Set-Cookie' header": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Verify the response body contains the expected message": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Presence of 'Set-Cookie' header in the response": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				250
+			],
+			"allTests": [
+				{
+					"Response status code is 201": true,
+					"Response time is less than 300ms": true,
+					"Verify that the response body is 'Created'": true,
+					"Validate the Content-Type is text/plain": false,
+					"Ensure that the response does not contain any unnecessary fields or data": false,
+					"Ensure that the response contains the 'Set-Cookie' header": false,
+					"Verify the response body contains the expected message": true,
+					"Presence of 'Set-Cookie' header in the response": false
+				}
+			]
+		},
+		{
+			"id": "cb552052-32f6-4ac2-ab14-b07a22c221c8",
+			"name": "healthCheck",
+			"url": "https://restful-booker.herokuapp.com/ping",
+			"time": 247,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Response status code is 201": true,
+				"Response time is less than 200ms": false,
+				"Response has the required Content-Type header": true,
+				"Response body matches the expected schema for a text/plain content type": true,
+				"Response has the required header 'Location'": false
+			},
+			"testPassFailCounts": {
+				"Response status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response has the required Content-Type header": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response body matches the expected schema for a text/plain content type": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required header 'Location'": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				247
+			],
+			"allTests": [
+				{
+					"Response status code is 201": true,
+					"Response time is less than 200ms": false,
+					"Response has the required Content-Type header": true,
+					"Response body matches the expected schema for a text/plain content type": true,
+					"Response has the required header 'Location'": false
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 3259,
+	"collection": {
+		"requests": [
+			{
+				"id": "245e443a-7c66-4112-8c3d-5b89acd0ac0d",
+				"method": "GET"
+			},
+			{
+				"id": "8d920918-3c34-4e20-bbd2-d2b771a7d0d5",
+				"method": "GET"
+			},
+			{
+				"id": "5630ee91-039c-446b-bfc7-3f2004e2f6c4",
+				"method": "POST"
+			},
+			{
+				"id": "ea746e4c-abc8-40ce-9860-6adad0f84eb5",
+				"method": "PUT"
+			},
+			{
+				"id": "94a63319-679a-4a7d-9475-c6f0c915f2bc",
+				"method": "PATCH"
+			},
+			{
+				"id": "cabf86e4-0712-46ed-a96b-f6c15604849a",
+				"method": "DELETE"
+			},
+			{
+				"id": "cb552052-32f6-4ac2-ab14-b07a22c221c8",
+				"method": "GET"
+			}
+		]
+	}
+}
